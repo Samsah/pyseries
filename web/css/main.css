@@ -1,0 +1,75 @@
+#left {
+	float: left;
+}
+#right {
+	float: right;
+}
+#footer { 
+	padding-top: 1em;
+	clear: both;
+}
+
+.yesterday {
+	color: gray;
+	background-color: white;
+}
+.today {
+	font-weight: bold;
+	color: WindowText;
+	background-color: white;
+}
+.active {
+	background-color: #eef;
+	color: WindowText;
+}
+.selected {
+	font-weight:bold;
+}
+.odd {
+	background: #eee;
+}
+.even {
+}
+
+thead tr {
+	background: #ddd;
+	color: WindowText;
+}
+
+#airdates caption {
+	background: #ddd;
+	color: black;
+	font-weight: bold;
+}
+
+#tracklist {
+	border: thin #999 solid;
+	padding: 0.5ex;
+}
+#tracklist a {
+	text-decoration: none;
+	color: black;
+}
+#tracklist h2 {
+	margin-top: 0;
+	font-size: 90%;
+}
+
+#tracklist ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#tracklist li:hover {
+	background: #ddd;
+}	
+
+#controls a {
+	color: black;
+}
+
+#controls li {
+	list-style-type: none;
+	display: inline;
+	padding-left: 2ex; 
+}
