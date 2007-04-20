@@ -40,8 +40,13 @@ class PySeries(object):
         f = urllib2.urlopen(url)
         bs = BeautifulSoup(f)
 
-        seriename = bs.fetch("h1")[0].renderContents()
-        seriename = re.sub("<.*?>", "", seriename) # remove HTML
+        # this will fail if the serie page has been redirected
+        # epguides uses a dimwitted meta refresh instead of a proper one...
+        try:
+            seriename = bs.fetch("h1")[0].renderContents()
+            seriename = re.sub("<.*?>", "", seriename) # remove HTML
+        except IndexError:
+            return
 
         # parse just the relevant parts with regexes
         filedata = bs.fetch("pre")[0].renderContents().split("\n")
